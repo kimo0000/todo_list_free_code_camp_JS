@@ -1,0 +1,146 @@
+*, ::after, ::before {
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial;
+}
+
+.container {
+    width: 50%;
+    margin: 50px auto;
+    padding: 10px;
+    background-color: #eee;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 8px;
+}
+
+.alert_item {
+    border-radius: 8px;
+    padding: 5px 8px;
+    font-weight: 700;
+}
+
+.alert_item.succes {
+    background-color: #fff;
+    color: green;
+}
+
+.alert_item.danger {
+    background-color: #fff;
+    color: #f50;
+}
+
+.title {
+    margin: 0 0 15px;
+    padding: 0 0 10px;
+    position: relative;
+}
+
+.title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: #f50;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+}
+
+form input[type="text"] {
+    padding: 5px 8px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    width: calc(100% - 100px);
+}
+
+form .submit {
+    width: 100px;
+    padding: 5px 8px;
+    background-color: #f50;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .3s;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+form .submit:hover, .clear_all:hover {
+    background-color: rgb(201, 0, 0);
+}
+
+.content {
+    padding: 10px;
+    visibility: hidden;
+}
+
+.content.show {
+    visibility: visible;
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+}
+
+.result .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 5px 8px;
+    background-color:#fff;
+    border-radius: 8px;
+}
+
+.item .icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.item .icons .edit {
+    color: greenyellow;
+}
+
+.item .icons .delete {
+    color: red;
+}
+
+.clear_all {
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 8px;
+    padding: 5px 8px;
+    background-color: #f50;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .3s;
+}
